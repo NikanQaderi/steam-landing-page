@@ -1,0 +1,87 @@
+#featuredSlidercon{
+    width: 1300px;
+    height: 440px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    
+}
+#featurehead{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;  
+    position: relative;
+}
+#featurehead > #featureTitle{
+    width: 780px;
+    height: 26px;
+    font-size: 28px;
+    color: white;
+    margin-top:25px;
+}
+#featurehead > #featureSubTitle{
+    width: 780px;
+    height: 28px;
+    font-size: 20px;
+    color: #cccccc;
+    margin-top: 3px;
+
+}
+#featurehead > #featureButton{
+    width: 105px;
+    height: 32px;
+    background-color: #cccccc;
+    border-radius: 3px;   
+    position: absolute;
+    font-size: 18px;
+    font-weight: 900;
+    right: 0; 
+    top: 15px;
+    text-align: center;
+    align-content: center;
+}
+#featurehead > #featureButton:hover{
+    cursor: pointer;
+    background-color: white;
+}
+#featuredSlider{
+    width: 600%;
+    height: 246px;
+    margin: 0 auto;
+    align-items: center;    
+    border: 1px solid blue;
+    display: flex;
+    gap: 20px;
+}
+#featuredSlider > div:first-child{
+    margin-left: 30px;
+}
+
+#featuredSlider > .featureGame{
+    width: 400px;
+    height: 225px;
+    position: relative
+}
+#featuredSlider > .featureGame > img{
+    width: 100%;
+}
+
+#featuregameleft{
+    left: -40px;
+    top: 200px;
+}
+#featuregameright{
+    right: -40px;
+    top: 200px;
+}
+
+.featurePriceCon{
+    width: 180px;
+    position: absolute;
+    height: 25px;
+    right: -2px;
+    bottom: -29px;
+    display: flex;
+}

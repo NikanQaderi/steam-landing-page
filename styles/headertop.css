@@ -1,0 +1,152 @@
+/* header top */
+#headertop{
+    display: flex;
+    height: 104px;
+}
+#headertop > #steamicon{
+    width: 176px;
+    font-size: 27px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+    color: #bab9b6;
+    margin-left: 90px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#steamicon > img{
+    width: 45px;
+    height: 45px;
+}
+#headertop > #nav-container{
+    font-size: 17px;
+    color: #dcdede;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navitems{
+text-align: center;
+align-content: center;
+height: 15px;
+}
+#nav-container > #store{
+width: 50px;
+color:#198bd6;
+border-bottom: 2px solid #198bd6;
+}
+#nav-container > #community{
+width:110px;
+margin-left: 10px;
+}
+#nav-container > #about{
+width: 70px;
+}
+#nav-container > #support{
+width: 87px;
+}
+#headertop > #action-menu{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 100px;
+    top: 6px;
+    color: #bab9b6;
+    font-size: 14px;
+}
+#action-menu > #installbut > button{
+    height: 24px;
+    width: 100px;
+    white-space:nowrap; 
+    color: white;
+    background-color:#5c7e10;
+    border: none;
+}
+#action-menu > #login{
+    width: 34px;
+    margin-left: 10px;
+    border-right: 1px solid #bab9b6;
+}
+#action-menu > #language{
+    width: 70px;
+    margin-left: 10px;
+}
+
+/* header bottom */
+#headerbot{
+    height: 46px;
+    display: flex;
+    background-color: rgba(32, 51, 66);
+    font-family: labrador;
+}
+#headerbot > #browse-menu{
+    display: flex;
+    align-items: center;
+    width: 592px;
+    margin-left: 100px;
+    color: white;
+    font-size: 18px;
+}
+#browse-menu > div > img{
+    width: 10px;
+    color: white;
+}
+
+#browse-menu > div:nth-child(1){
+    width: 83px;
+}
+#browse-menu > div:nth-child(2){
+    width: 152px;
+}
+#browse-menu > div:nth-child(3){
+    width: 104px;
+}
+#browse-menu > div:nth-child(4){
+    width: 117px;
+}
+#browse-menu > div:nth-child(5){
+    width: 138px;
+}
+#search-container{
+    width: 480px;
+    height: 34px;
+    display: flex;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+#search-container > #search-icon{
+    width:34px;
+    background-color: #1a9fff;
+    align-content: center;
+    text-align: center;
+}
+#search-container > #search-icon > img{
+width: 18px;
+background-color: #1a9fff;
+transition: 0.2s;
+margin-top: 2px;
+}
+
+#search-container > #search-icon:hover > img{
+    width: 20px;
+}
+
+#search-container > #search-box > input{
+    width: 446px;
+    height: 34px;
+    color: white;
+    background-color:#445059;
+    font-family: "Motiva Sans",Arial,sans-serif;    
+    border-radius: 2px 0px 0px 2px;
+    border: 1px solid #ffffff24;
+}
+
+#search-container > #search-box > input::placeholder{
+    color: white;
+}
+

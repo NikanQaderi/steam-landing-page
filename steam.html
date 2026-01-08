@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/steam.css">
+    <link rel="stylesheet" href="styles/headertop.css">
+    <link rel="stylesheet" href="styles/sale-game-slider.css">
+    <link rel="stylesheet" href="styles/featuredSlider.css">
+    <link rel="stylesheet" href="styles/GameGridCards.css">
+    <script src="steam.js"></script>
+</head>
+
+<body>
+    <div>
+        <div id="header">
+            <div id="headertop">
+                <div id="steamicon">
+                    <img src="icons/steam-svgrepo-com.svg" alt="">
+                    <p>STEAM</p>
+                </div>
+                <div id="nav-container">
+                    <div id="store" class="navitems"> STORE </div>
+                    <div id="community" class="navitems"> COMMUNITY</div>
+                    <div id="about" class="navitems"> ABOUT</div>
+                    <div id="support" class="navitems"> SUPPORT</div>
+                </div>
+                <div id="action-menu">
+                    <div id="installbut">
+                        <button> Install Steam </button>
+                    </div>
+                    <div id="login"> login</div>
+                    <div id="language"> language</div>
+                </div>
+            </div>
+            <div id="headerbot">
+                <div id="browse-menu">
+                    <div>Browse <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
+                    <div>Recommendations <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
+                    <div>Categories <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
+                    <div>Ways to Play <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
+                    <div>Special Sections <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
+                </div>
+                <div id="search-container">
+                    <div id="search-box"><input placeholder="Search the store" type="search">
+                    </div>
+                    <div id="search-icon"> <img src="icons/search-alt-svgrepo-com.svg" alt=""></div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="content">
+            <div id="winter-sale-video">
+                <video autoplay loop muted>
+                    <source src="videos/webm_page_bg_english.webm" type="video/webm">
+                </video>
+            </div>
+            <div id="salegame-container">
+                <div id="saleGameSlider">
+                    <div class="game-item">
+                        <img src="game-image/hero_capsule_003.jpg" alt="">
+                        <div class="price-container">
+                            <div class="off-price"> -30%</div>
+                            <div class="price">
+                                <span> <del>$30.00</del> </span>
+                                $27.00 USD
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="game-item">
+                        <img src="game-image/hero_capsule_004.jpg" alt="">
+                        <div class="price-container">
+                            <div class="off-price"> -25%</div>
+                            <div class="price">
+                                <span> <del>$90.00</del> </span>
+                                $70.25 USD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-item">
+                        <img src="game-image/hero_capsule_027.jpg" alt="">
+                        <div class="price-container">
+                            <div class="off-price"> -90%</div>
+                            <div class="price">
+                                <span> <del>$10.50</del> </span>
+                                $99.00 USD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button" id="salegameleft"> <img src="icons/left-svgrepo-com.svg" alt=""></div>
+                    <div class="button" id="salegameright"> <img src="icons/right-svgrepo-com (1).svg" alt=""></div>
+                </div>
+            </div>
+            <div id="gameAwardsVote"></div>
+
+
+            <div id="featuredSlidercon">
+                <div id="featurehead">
+                    <div id="featureTitle">Featured Deep Discounts</div>
+                    <div id="featureSubTitle"> Especially Great Deals on Some of the All-Time Greats</div>
+                    <div id="featureButton"> See All </div>
+                </div>
+                <div id="featuredSlider">
+                    <div class="featureGame"> <img src="game-image/featuredSlider/capsule_616x353_009.jpg" alt="">
+                        <div class="featurePriceCon">
+                            <div class="off-price"> -90%</div>
+                            <div class="price">
+                                <span> <del>$98.15</del> </span>
+                                $07.00 USD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featureGame"> <img src="game-image/featuredSlider/capsule_616x353_010.jpg" alt="">
+                        <div class="featurePriceCon">
+                            <div class="off-price"> -95%</div>
+                            <div class="price">
+                                <span> <del>$58.45</del> </span>
+                                $13.00 USD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featureGame"> <img src="game-image/featuredSlider/capsule_616x353_011.jpg" alt="">
+                        <div class="featurePriceCon">
+                            <div class="off-price"> -75%</div>
+                            <div class="price">
+                                <span> <del>$47.00</del> </span>
+                                $27.00 USD
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button" id="featuregameleft"> <img src="icons/left-svgrepo-com.svg" alt=""></div>
+                <div class="button" id="featuregameright"> <img src="icons/right-svgrepo-com (1).svg" alt=""></div>
+            </div>
+
+            <div id="homePageGameCards">
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+                <div class="GameCards">
+                    <img src="" alt="">
+                    <div></div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+        <div id="footer"></div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: labrador;
+    src:url(../font/labrador-b/LabradorB-ExtraBold.ttf) ;
+}
+body{
+    background-color: #171d25;
+    margin: 0;
+}
+
+#header{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    
+}
+#content{
+    overflow: hidden;
+    background-image: url(../img/tiled_bg_english.jpg);
+    background-repeat: repeat;
+    background-size: 35%;
+    height: 4000px;
+}
+#content > #winter-sale-video{
+    height: 580px;
+    width: 3000px;
+    position: relative;
+}
+#content > #winter-sale-video > video{
+    width:2000px;
+    position: absolute;
+    left: -130px;
+}
+.button{
+    width: 32px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+#gameAwardsVote{
+    width: 1201px;
+    height: 175px;
+    margin: 0 auto;
+    background-image: url("../img/Screenshot 2025-12-28 151232.png");
+    background-size: cover;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+#gameAwardsVote:hover{
+    width: 1220px;
+}
+
