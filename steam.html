@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>welcome-to-steam</title>
     <link rel="stylesheet" href="styles/steam.css">
-    <link rel="stylesheet" href="styles/headertop.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/sale-game-slider.css">
     <link rel="stylesheet" href="styles/featuredSlider.css">
     <link rel="stylesheet" href="styles/GameGridCards.css">
     <link rel="stylesheet" href="styles/CategorySlider.css">
-    <script src="steam.js"></script>
+    <link rel="stylesheet" href="styles/underContent.css">
+    <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 
 <body>
@@ -23,26 +25,31 @@
                     <p>STEAM</p>
                 </div>
                 <div id="nav-container">
-                    <div id="store" class="navitems"> STORE </div>
-                    <div id="community" class="navitems"> COMMUNITY</div>
-                    <div id="about" class="navitems"> ABOUT</div>
-                    <div id="support" class="navitems"> SUPPORT</div>
+                    <div id="store" class="navitems navitemsClick" onclick="addClass(this)"> STORE </div>
+                    <div id="community" class="navitems" onclick="addClass(this)"> COMMUNITY</div>
+                    <div id="about" class="navitems" onclick="addClass(this)"> ABOUT</div>
+                    <div id="support" class="navitems" onclick="addClass(this)"> SUPPORT</div>
                 </div>
                 <div id="action-menu">
                     <div id="installbut">
                         <button> Install Steam </button>
                     </div>
-                    <div id="login"> login</div>
-                    <div id="language"> language</div>
+                    <a id="login"> login</a>
+                    <a id="language"> language</a>
                 </div>
             </div>
             <div id="headerbot">
                 <div id="browse-menu">
-                    <div>Browse <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
-                    <div>Recommendations <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
-                    <div>Categories <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
-                    <div>Ways to Play <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
-                    <div>Special Sections <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt=""></div>
+                    <div class="browse-Items">Browse <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg" alt="">
+                    </div>
+                    <div class="browse-Items">Recommendations <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg"
+                            alt=""></div>
+                    <div class="browse-Items">Categories <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg"
+                            alt=""></div>
+                    <div class="browse-Items">Ways to Play <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg"
+                            alt=""></div>
+                    <div class="browse-Items">Special Sections <img src="icons/down-arrow-backup-2-svgrepo-com (1).svg"
+                            alt=""></div>
                 </div>
                 <div id="search-container">
                     <div id="search-box"><input placeholder="Search the store" type="search">
@@ -62,10 +69,11 @@
             </div>
             <div id="salegame-container">
                 <div id="saleGameSlider">
+
                     <div class="game-item">
                         <img src="game-image/hero_capsule_003.jpg" alt="">
                         <div class="price-container">
-                            <div class="off-price"> -30%</div>
+                            <span class="off-price"> -30%</span>
                             <div class="price">
                                 <span> <del>$30.00</del> </span>
                                 $27.00 USD
@@ -76,7 +84,7 @@
                     <div class="game-item">
                         <img src="game-image/hero_capsule_004.jpg" alt="">
                         <div class="price-container">
-                            <div class="off-price"> -25%</div>
+                            <span class="off-price"> -25%</span>
                             <div class="price">
                                 <span> <del>$90.00</del> </span>
                                 $70.25 USD
@@ -86,15 +94,21 @@
                     <div class="game-item">
                         <img src="game-image/hero_capsule_027.jpg" alt="">
                         <div class="price-container">
-                            <div class="off-price"> -90%</div>
+                            <span class="off-price"> -90%</span>
                             <div class="price">
                                 <span> <del>$10.50</del> </span>
                                 $99.00 USD
                             </div>
                         </div>
                     </div>
+
                     <div class="button" id="salegameleft"> <img src="icons/left-svgrepo-com.svg" alt=""></div>
                     <div class="button" id="salegameright"> <img src="icons/right-svgrepo-com (1).svg" alt=""></div>
+                </div>
+                <div id="slideThunmbs">
+                    <span class="Thumbs"></span>
+                    <span class="Thumbs"></span>
+                    <span class="Thumbs"></span>
                 </div>
             </div>
             <div id="gameAwardsVote"></div>
@@ -223,22 +237,133 @@
 
             </div>
 
-            <div id="categorySliderContainer">
+            <div id="categoryContainer">
                 <div id="categoryheader">Browse by category</div>
-                <div id="categorySlider"></div>
-                <div id="slideThunmbs"></div>
+                <div id="categorySliderContainer">
+                    <div id="categorySlider">
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">CITY & SETELEMENT</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">FREE TO PLAY</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">SIMULATION</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">ANIME</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">ACTION</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">ALL SPORTS</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">OPEN WORLD</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">VR TITLES</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">ROGUE LIKE</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">ADVENTURE</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">VISUAL NOVEL</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">STORY-RICH</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">SURVIVAL</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">SCI-FI&CYBERPUNK</div>
+                        </div>
+                        <div class="categoryItem">
+                            <div class="categoryItem-Label">FIGHTING</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="slideThunmbs">
+                    <span class="Thumbs"></span>
+                    <span class="Thumbs"></span>
+                    <span class="Thumbs"></span>
+                </div>
             </div>
 
+            <div id="underContent">
+                <div id="homeTabs-Menu">
+                    <div id="homeTabs">
+                        <div class="homeTabs-Items">Popular New Releases</div>
+                        <div class="homeTabs-Items">Top Sellers</div>
+                        <div class="homeTabs-Items">Upcoming</div>
+                        <div class="homeTabs-Items">Trending Free</div>
+                    </div>
+                    <span id="homeTabs-Label"> <input type="checkbox">Include free to play items
+                        <img src="img/ico_info.png" alt="">
+                    </span>
+                </div>
+                <div id="homeTabs-Columns">
 
+                    <div id="homeTabsGameList">
+                        <!-- <div class="homeTabs-GameItem">
+                            <img src="game-image/undercontent/undercontent01.jpg" alt="">
+                            <div class="homeTabs-GameItem-Container">
+                                <div class="TabsGame-Title"> Dead-Island 2</div>
+                                <div class="TabsGame-tags">FPS, Shooter, Multiplayer, Competitive</div>
+                                <div class="TabsGame-details"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div id="homeTabs-Preview">
+                        <div id="preview-Title"></div>
+                        <div id="review_summary"></div>
+                        <div id="preview-Tags"></div>
+                        <video src=""></video>
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
 
         </div>
 
+        <div id="footer">
+            <div id="footerContent">
+                <hr id="footerr-hr1">
+                <span id="footerlogo1">
+                    <img src="img/logo_steam_footer.png" alt="">
+                </span>
+                <span id="footerlogo2">
+                    <img src="img/footerLogo_valve_new.png" alt="">
+                </span>
+                <div id="footer-Text1">© 2025 Valve Corporation. All rights reserved. All trademarks are property of
+                    their respective owners in the US and other countries.</div>
+                <div id="footer-Text2">VAT included in all prices where applicable.
+                    <span> Priva
+                        cy Policy &nbsp; | &nbsp; Legal &nbsp; | &nbsp;
+                        Accessibility &nbsp; | &nbsp; Steam Subscriber Agreement &nbsp; | &nbsp; Refunds &nbsp; | &nbsp;
+                        Cookies
+                    </span>
+                </div>
+                <hr id="footerr-hr2">
+                <div id="valveLinks">
 
-
-        <div id="footer"></div>
-
+                    About Valve &nbsp; | &nbsp; Jobs &nbsp; | &nbsp; Steamworks &nbsp; | &nbsp; Steam Distribution
+                    &nbsp;|&nbsp; Support &nbsp; | &nbsp; Gift Cards &nbsp; | &nbsp; Facebook &nbsp; | &nbsp; X &nbsp; |
+                    &nbsp; Bluesky</div>
+                <!-- <button onclick="addToItem()">nikan</button> -->
+            </div>
+        </div>
     </div>
 
 </body>
+<script src="script/steam.js"></script>
+<script src="script/database.js"></script>
 
 </html>

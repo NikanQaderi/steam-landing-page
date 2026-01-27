@@ -14,7 +14,7 @@
     margin: 0 auto;
     border: 1px solid blue;
     display: flex;
-    overflow : hidden;
+    /* overflow : hidden; */
 }
 
 #saleGameSlider > .game-item{

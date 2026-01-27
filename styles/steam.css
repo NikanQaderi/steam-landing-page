@@ -15,11 +15,10 @@ body{
     
 }
 #content{
-    overflow: hidden;
+    /* overflow: hidden; */
     background-image: url(../img/tiled_bg_english.jpg);
     background-repeat: repeat;
     background-size: 35%;
-    height: 4000px;
 }
 #content > #winter-sale-video{
     height: 580px;
@@ -51,4 +50,20 @@ body{
 #gameAwardsVote:hover{
     width: 1220px;
 }
-
+#slideThunmbs{
+    width: 1200px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 0 auto;
+    border: 1px solid purple;
+}
+#slideThunmbs > .Thumbs{
+    width: 15px;
+    border-radius: 20px;
+    height: 4px;
+    background-color: #ffffff;
+    opacity: 0.5;
+}

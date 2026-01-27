@@ -1,0 +1,56 @@
+#footer{
+    height: 240px;
+}
+#footerContent{
+    width:940px;
+    height:195px;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: #c6d4df;
+    position: relative;
+}
+#footerr-hr1{
+    color:#363c44;
+}
+#footerlogo1 > img{
+    width: 92px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+}
+
+#footerlogo2 > img{
+    width: 85px;
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+#footer-Text1{
+    width: 768px;
+    height: 16px;
+    color: #8f98a0;
+    font: 12px arial;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+#footer-Text2{
+    width: 768px;
+    height: 16px;
+    font: 12px arial;
+    color: #8f98a0;
+    margin-left: 10px;
+}
+#footer-Text2 > span{
+    color: white;
+    cursor: pointer;
+}
+#footerr-hr2{
+    margin-top: 20px;
+    color: #363c44;
+}
+#valveLinks{
+    color: #c6d4df;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}

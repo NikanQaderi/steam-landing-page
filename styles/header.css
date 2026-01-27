@@ -31,14 +31,19 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .navitems{
-text-align: center;
-align-content: center;
-height: 15px;
+    text-align: center;
+    align-content: center;
+    height: 22px;
+    cursor: pointer;
+}
+
+.navitemsClick{
+    border-bottom: 2px solid #198bd6;
+    color:#198bd6;
+    
 }
 #nav-container > #store{
 width: 50px;
-color:#198bd6;
-border-bottom: 2px solid #198bd6;
 }
 #nav-container > #community{
 width:110px;
@@ -50,6 +55,8 @@ width: 70px;
 #nav-container > #support{
 width: 87px;
 }
+
+
 #headertop > #action-menu{
     display: flex;
     align-items: center;
@@ -76,7 +83,6 @@ width: 87px;
     width: 70px;
     margin-left: 10px;
 }
-
 /* header bottom */
 #headerbot{
     height: 46px;
@@ -92,11 +98,13 @@ width: 87px;
     color: white;
     font-size: 18px;
 }
+#browse-menu > .browse-Items{
+    cursor: pointer;
+}
 #browse-menu > div > img{
     width: 10px;
     color: white;
 }
-
 #browse-menu > div:nth-child(1){
     width: 83px;
 }
@@ -116,7 +124,8 @@ width: 87px;
     width: 480px;
     height: 34px;
     display: flex;
-    margin-left: 150px;
+    position: absolute;
+    right: 10px;
     margin-top: 5px;
 }
 #search-container > #search-icon{
@@ -131,11 +140,9 @@ background-color: #1a9fff;
 transition: 0.2s;
 margin-top: 2px;
 }
-
 #search-container > #search-icon:hover > img{
     width: 20px;
 }
-
 #search-container > #search-box > input{
     width: 446px;
     height: 34px;
@@ -150,3 +157,88 @@ margin-top: 2px;
     color: white;
 }
 
+/* responsive header */
+
+@media screen and (max-width:1200px){   
+#headertop > #action-menu{
+    right: 0px;
+}
+#headertop > #steamicon{
+    margin-left: 75px;
+}
+#headerbot > #browse-menu{
+    width: 540px;
+    margin-left: 90px;
+    
+}
+#search-container{
+    width: 380px;
+    right: -55px;
+}
+#search-container > #search-box > input{
+    width: 285px;
+}
+}
+@media screen and (max-width:1000px){   
+#headertop > #action-menu{
+    right: 0px;
+}
+#headertop > #steamicon{
+    width: 100px;
+    font-size: 18px;
+    margin-left: 50px;
+}
+#steamicon > img{
+    width: 30px;
+    height: 30px;
+}
+#headerbot > #browse-menu{
+    width: 450px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+#browse-menu > div > img{
+    width: 8px;
+}
+
+#search-container{
+    height: 30px;
+    margin-top: 7px;
+    width: 300;
+    right: -110px;
+}
+#search-container > #search-icon > img{
+margin-top: 4px;
+}
+#search-container > #search-box > input{
+    width:230px;
+    height: 30px;
+}
+
+
+}
+@media screen and (max-width:800px){
+    
+#search-container{
+    display: none;
+}
+#headertop > #action-menu{
+    display: none;
+}
+#headertop > #steamicon{
+    width: 70px;
+    font-size: 15px;
+    margin-left: 60px;
+}
+#steamicon > img{
+    width: 30px;
+    height: 30px;
+}
+#headertop > #nav-container{
+    gap: 0px;
+}
+.navitems{
+    font-size: 15px;
+    height: 20px;
+}
+}
