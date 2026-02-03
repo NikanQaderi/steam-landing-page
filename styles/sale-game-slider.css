@@ -1,28 +1,101 @@
 #salegame-container{
-    width: 1300px;
+    width: 1250px;
     height: 535px;
-    border: 1px solid red;
     margin: 0 auto;
     margin-top: -100px;
     align-content: center;
     position: relative;
+    overflow: hidden;
 
 }
 #salegame-container > #saleGameSlider{
-    width: 1200px;
-    height: 450px;
     margin: 0 auto;
-    border: 1px solid blue;
+    overflow-y: hidden;
     display: flex;
-    /* overflow : hidden; */
+    width: fit-content;
+    position: absolute;
+    top: 30px;
+    transition: 0.5s;
+}
+#saleGameSlider > .saleGameSliderPage{
+    width: 1154px;
+    height: 448px;
+    display: flex;
+    margin-left: 36px;
+    gap: 20px;
 }
 
-#saleGameSlider > .game-item{
+.saleGameSliderPage > .game-item{
     width: 365px;
     height: 448px;
     position: relative;
     margin-left: 25px;
 }
+.game-item:hover .price-container{
+    bottom: 30px;
+    transition: 0.5s;
+}
+.game-item > .game-item-hover{
+    width: 346px;
+    height: 0;
+    background-color: #0e496a;
+    transition: 0.5s;
+}
+.game-item:hover > .game-item-hover{
+    height: 448px;
+    transition: 0.5s;
+}
+.game-item-hover > video{
+    width: 100%;
+    height: fit-content;
+}
+.game-item-hover > .gameItem-Title{
+    color: white;
+    font-family: serif;
+    font-size: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.game-item-hover > .game-View{
+    color:#6fbeff;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+.game-item-hover > .game-View > span{
+    color: white;
+}
+.gameItem-Tags{
+margin-left: 25px;
+margin-top: 5px;
+display: flex;
+gap: 20px;
+}
+.gameItem-Tags > span{
+width: fit-content;
+height: fit-content;
+background-color: #7c7d83;
+padding: 0 4px 0 4px;
+border-radius: 3px;
+}
+
+ button{
+    padding:5px 10px 5px 10px;
+    background:#a1cd44;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-left: 25px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
 .game-item > img{
     width: 100%;
     height: 100%;
@@ -61,6 +134,3 @@
     right: 10px;
     top: 250px;
 }
-
-
-

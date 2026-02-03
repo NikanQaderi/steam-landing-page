@@ -55,16 +55,15 @@ width: 70px;
 #nav-container > #support{
 width: 87px;
 }
-
-
 #headertop > #action-menu{
     display: flex;
     align-items: center;
     position: absolute;
     right: 100px;
-    top: 6px;
+    top: 10px;
     color: #bab9b6;
     font-size: 14px;
+    cursor: pointer;
 }
 #action-menu > #installbut > button{
     height: 24px;
@@ -72,7 +71,9 @@ width: 87px;
     white-space:nowrap; 
     color: white;
     background-color:#5c7e10;
+    margin-top: 0px;
     border: none;
+    cursor: pointer;
 }
 #action-menu > #login{
     width: 34px;
