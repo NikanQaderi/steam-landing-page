@@ -52,7 +52,7 @@ var salagameGames = [
     {id:"12",pic:"saleGameItem12",price:"$25.00",off:"-20%",video:"_013.webm",title:"Signalis",points:"100,000",tags:["multiplayer","shooter","openworld"]},
 ]
     for(i=0; i < salagameGames; i++){
- 
+        
     }
 //homePageCards Grid Style
 var homePageCards = [
@@ -100,4 +100,60 @@ for(i=0;i < homePageCards.length;i++){
     gameCard.appendChild(video)
 
     homePageGameCards.appendChild(gameCard);
+}
+
+//featuredSlider Part
+
+var featuredSliderData = [ 
+    {id:"01",pic:"_002.jpg",off:"90%",price:"$58.45",offprice:"17.00USD"},
+    {id:"02",pic:"_003.jpg",off:"30%",price:"$18.45",offprice:"07.00USD"},
+    {id:"03",pic:"_004.jpg",off:"10%",price:"$28.45",offprice:"27.00USD"},
+    {id:"04",pic:"_005.jpg",off:"60%",price:"$48.45",offprice:"37.00USD"},
+    {id:"05",pic:"_006.jpg",off:"70%",price:"$58.45",offprice:"47.00USD"},
+    {id:"06",pic:"_007.jpg",off:"80%",price:"$68.45",offprice:"57.00USD"},
+    {id:"07",pic:"_008.jpg",off:"20%",price:"$78.45",offprice:"67.00USD"},
+    {id:"08",pic:"_009.jpg",off:"30%",price:"$38.45",offprice:"77.00USD"},
+    {id:"09",pic:"_010.jpg",off:"50%",price:"$58.45",offprice:"87.00USD"},
+    {id:"10",pic:"_011.jpg",off:"40%",price:"$88.45",offprice:"97.00USD"},
+    {id:"11",pic:"_012.jpg",off:"60%",price:"$49.45",offprice:"20.00USD"},
+    {id:"12",pic:"_013.jpg",off:"70%",price:"$15.45",offprice:"22.00USD"},
+];
+
+let featuredSliderContainer = document.getElementById("featuredSlider");
+
+for(let i = 0; i < featuredSliderData.length; i++){  
+
+    let featureGame = document.createElement("div");
+    featureGame.className = "featureGame";
+    
+    let image = document.createElement("img");
+    image.src = "game-image/featuredSlider/capsule_616x353" + featuredSliderData[i].pic;
+    image.alt = `Game ${featuredSliderData[i].id}`;
+
+    let featurePriceContainer = document.createElement("div");
+    featurePriceContainer.className = "featurePriceCon";
+
+    let off = document.createElement("div");
+    off.className = "off-price";
+    off.innerHTML = featuredSliderData[i].off; 
+
+    let price = document.createElement("div");
+    price.className = "price";
+    
+    let originalPrice = document.createElement("del");
+    originalPrice.innerHTML = featuredSliderData[i].price;
+
+    let discountedPrice = document.createElement("span");
+    discountedPrice.innerHTML = featuredSliderData[i].offprice;
+
+    price.appendChild(originalPrice);
+    price.appendChild(discountedPrice);
+
+    featurePriceContainer.appendChild(off);
+    featurePriceContainer.appendChild(price);
+
+    featureGame.appendChild(image);
+    featureGame.appendChild(featurePriceContainer);
+
+    featuredSliderContainer.appendChild(featureGame);
 }

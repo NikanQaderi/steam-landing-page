@@ -6,8 +6,7 @@
         });
         Element.classList.add("navitemsClick")
     }
-    console.log("nikan")
-
+ 
 //salegame Slider
 
 let position = 0;
@@ -36,4 +35,67 @@ prev.addEventListener("click", function() {
     }
 })
 
-//
+//thumbs
+function addClass(Element){
+        const items = document.querySelectorAll(".navitems")
+        items.forEach(navitems => {
+            navitems.classList.remove("navitemsClick")
+        });
+        Element.classList.add("navitemsClick")
+    }
+
+    //featuredSlider
+
+    let featuredPosition = 0;
+
+    const featurenext = document.getElementById("featuregameright")
+    featurenext.addEventListener("click",function(){
+        if(featuredPosition > -3870){
+            featuredPosition = featuredPosition - 1292;
+            featuredSlider.style.left = featuredPosition + "px";
+        }
+        else if (featuredPosition < -3870 ){
+            featuredPosition = 0;
+            featuredSlider.style.left = featuredPosition + "px";
+        }
+    })
+        const featureprev = document.getElementById("featuregameleft")
+    featureprev.addEventListener("click",function(){
+        if(featuredPosition < 0){
+            featuredPosition = featuredPosition + 1292;
+            featuredSlider.style.left = featuredPosition + "px";
+        }
+        else if (featuredPosition == 0 ){
+            featuredPosition = -3876;
+            featuredSlider.style.left = featuredPosition + "px";
+        }
+    })
+
+
+
+const container = document.querySelector("#categorySliderContainer");
+let isDragging = false;
+let startX;
+let scrollLeft;
+container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    container.classList.add('dragging');
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    e.preventDefault();
+});
+container.addEventListener('mousemove', (e) => {
+    if (!isDragging) return; 
+    const x = e.pageX - container.offsetLeft;
+    const walk = (x - startX) * 2;
+    container.scrollLeft = scrollLeft - walk;
+    e.preventDefault();
+});
+container.addEventListener('mouseup', () => {
+    isDragging = false;
+    container.classList.remove('dragging');
+});
+container.addEventListener('mouseleave', () => {
+    isDragging = false;
+    container.classList.remove('dragging');
+});

@@ -6,13 +6,15 @@
     position: relative;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
-    
 }
+
 #featurehead{
     width: 1200px;
     height: 60px;
     margin: 0 auto;  
-    position: relative;
+    position: absolute;
+    left: 35px;
+    
 }
 #featurehead > #featureTitle{
     width: 780px;
@@ -38,7 +40,7 @@
     font-size: 18px;
     font-weight: 900;
     right: 0; 
-    top: 15px;
+    top: 30px;
     text-align: center;
     align-content: center;
 }
@@ -47,13 +49,14 @@
     background-color: white;
 }
 #featuredSlider{
-    width: 600%;
+    width: 400%;
     height: 246px;
-    margin: 0 auto;
-    align-items: center;    
-    /* border: 1px solid blue; */
     display: flex;
-    gap: 20px;
+    gap: 29px;
+    position: absolute;
+    top: 100px;
+    left: -10px;
+    transition: 0.5s;
 }
 #featuredSlider > div:first-child{
     margin-left: 30px;
@@ -69,19 +72,20 @@
 }
 
 #featuregameleft{
-    left: -40px;
-    top: 200px;
+    left: 580px;
+    bottom: 20px;
 }
 #featuregameright{
-    right: -40px;
-    top: 200px;
+    right: 580px;
+    bottom: 20px;
 }
 
 .featurePriceCon{
     width: 180px;
     position: absolute;
     height: 25px;
-    right: -2px;
+    right: -18px;
     bottom: -29px;
     display: flex;
 }
+
