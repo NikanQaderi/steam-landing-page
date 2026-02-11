@@ -157,7 +157,44 @@ margin-top: 2px;
 #search-container > #search-box > input::placeholder{
     color: white;
 }
-
+#searchResult{
+    width: 140%;
+    position: absolute;
+    max-height: 600px;
+    top: 40px;
+    right: 0;
+    overflow: auto;
+    border: 1px solid red;
+    z-index: 1;
+    background-color:#3e4453;
+}
+#searchResult > .searchResultTitle{
+    margin-left:18px;
+    margin-top: 8px;
+    color: #cccccc;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#searchResult > #searchItems{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #4d5665;
+}
+#searchResult > #searchItems:hover{
+    background-color: #718094;
+}
+#searchItems > .searchImage{
+    width: 30%;
+    height: 90px;
+}
+#searchItems  > .SearchgameName{
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+}
 /* responsive header */
 
 @media screen and (max-width:1200px){   
