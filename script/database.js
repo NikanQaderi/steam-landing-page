@@ -77,33 +77,25 @@ var homePageCards = [
     {id:"19",pic:"_034.jpg",video:"_032.webm"},
     {id:"20",pic:"_020.jpg",video:"_035.webm"}
 ]
-
+const homeGameCards = document.getElementById("homePageGameCards")
 for(i=0;i < homePageCards.length;i++){
     let gameCard = document.createElement("div")
     gameCard.className = "GameCards";
-    
     let image = document.createElement("img")
     image.src = "game-image/GameGridCards/capsule_616x353" + homePageCards[i].pic;
-
     let video = document.createElement("video")
     video.autoplay = true;
     video.loop = true;
     video.muted = true;
-
     let source = document.createElement("source")
     source.src = "videos/gameCards/microtrailer" + homePageCards[i].video
     source.type = "video/webm"
-
     video.appendChild(source);
-
     gameCard.appendChild(image)
     gameCard.appendChild(video)
-
-    homePageGameCards.appendChild(gameCard);
+    homeGameCards.appendChild(gameCard);
 }
-
 //featuredSlider Part
-
 var featuredSliderData = [ 
     {id:"01",pic:"_002.jpg",off:"90%",price:"$58.45",offprice:"17.00USD"},
     {id:"02",pic:"_003.jpg",off:"30%",price:"$18.45",offprice:"07.00USD"},
@@ -118,42 +110,61 @@ var featuredSliderData = [
     {id:"11",pic:"_012.jpg",off:"60%",price:"$49.45",offprice:"20.00USD"},
     {id:"12",pic:"_013.jpg",off:"70%",price:"$15.45",offprice:"22.00USD"},
 ];
-
 let featuredSliderContainer = document.getElementById("featuredSlider");
-
 for(let i = 0; i < featuredSliderData.length; i++){  
-
     let featureGame = document.createElement("div");
     featureGame.className = "featureGame";
-    
     let image = document.createElement("img");
     image.src = "game-image/featuredSlider/capsule_616x353" + featuredSliderData[i].pic;
     image.alt = `Game ${featuredSliderData[i].id}`;
-
     let featurePriceContainer = document.createElement("div");
     featurePriceContainer.className = "featurePriceCon";
-
     let off = document.createElement("div");
     off.className = "off-price";
     off.innerHTML = featuredSliderData[i].off; 
-
     let price = document.createElement("div");
     price.className = "price";
-    
     let originalPrice = document.createElement("del");
     originalPrice.innerHTML = featuredSliderData[i].price;
-
     let discountedPrice = document.createElement("span");
     discountedPrice.innerHTML = featuredSliderData[i].offprice;
-
     price.appendChild(originalPrice);
     price.appendChild(discountedPrice);
-
     featurePriceContainer.appendChild(off);
     featurePriceContainer.appendChild(price);
-
     featureGame.appendChild(image);
     featureGame.appendChild(featurePriceContainer);
-
     featuredSliderContainer.appendChild(featureGame);
+}
+//categorySliderItems
+var categoryValues = [
+    {id:1 ,value:"CITY & SETELEMENT"},
+    {id:2 ,value:"FREE TO PLAY"},
+    {id:3,value:"SIMULATION"},
+    {id:4 ,value:"ANIME"},
+    {id:5 ,value:"ACTION"},
+    {id:6 ,value:"ALL SPORTS"},
+    {id:7 ,value:"OPEN WORLD"},
+    {id:8 ,value:"VR TITLES"},
+    {id:9 ,value:"ROGUE LIKE"},
+    {id:10 ,value:"ADVENTURE"},
+    {id:11 ,value:"VISUAL NOVE"},
+    {id:12 ,value:"STORY-RICH"},
+    {id:13,value:"SURVIVAL"},
+    {id:14 ,value:"SCI-FI&CYBERPUNK"},
+    {id:15 ,value:"FIGHTING"}
+];
+
+let categorySliderContainer = document.querySelector(".categorySlider");
+
+for (let i = 0; i < categoryValues.length; i++) {
+    let categoryItem = document.createElement("div");
+    categoryItem.className = "categoryItem-Label";
+    categoryItem.innerHTML = categoryValues[i].value;
+
+    let categoryItemContainer = document.createElement("div");
+    categoryItemContainer.className = "categoryItem";
+    
+    categoryItemContainer.appendChild(categoryItem);
+    categorySliderContainer.appendChild(categoryItemContainer);
 }

@@ -157,6 +157,9 @@ margin-top: 2px;
 #search-container > #search-box > input::placeholder{
     color: white;
 }
+#search-container > #search-box > input:focus{
+    outline: none;
+}
 #searchResult{
     width: 140%;
     position: absolute;
@@ -164,7 +167,7 @@ margin-top: 2px;
     top: 40px;
     right: 0;
     overflow: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     z-index: 1;
     background-color:#3e4453;
 }

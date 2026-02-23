@@ -57,24 +57,13 @@ function fillSearch(jsonData) {
         searchResult.appendChild(searchItems);
     }
 }
-// var searchedItem =[];
-// var searchResult = document.getElementById("searchResult")
-// for( let element of gamesDatabase){
-//     if (element.gameName.indexOf(this.value) != -1){
-//         searchedItem.push(element.gameName)
-//     }
-//     searchResult.innerHTML = this.value;
-// }
-// function fillsearch(jsonData){
-//     for(let i = 0; i < gamesDatabase.length ; i++){
-//         let searchItems = document.createElement("div")
-//         searchItems.className = "searchItems"
-//         let image = document.createElement("img")
-//         image.src = "game-image/undercontent/" + gamesDatabase[i].pic;
-//         let span = document.createElement("span")
-//         span.innerHTML = gamesDatabase[i].gameName;
-//         searchItems.appendChild(img);
-//         searchItems.appendChild(span)
-//         searchResult.appendChild(searchItems);
-//     }
-// }
+
+document.addEventListener('click', function(event) {
+    const searchContainer = document.getElementById('search-container');
+    const searchResult = document.getElementById('searchResult');
+    
+    if (!searchContainer.contains(event.target) && !searchResult.contains(event.target)) {
+        searchResult.className = "";
+        searchResult.innerHTML = ""; 
+    }
+});
