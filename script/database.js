@@ -38,21 +38,114 @@ var underContentgames = [
 
 //saleGame part
 var salagameGames = [
-    {id:"1",pic:"saleGameItem01",price:"$30.00",off:"-20%",video:"_002.webm",title:"LeagueOfLegends",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"2",pic:"saleGameItem02",price:"$50.00",off:"-20%",video:"_003.webm",title:"Sekiro",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"3",pic:"saleGameItem03",price:"$22.00",off:"-20%",video:"_004.webm",title:"Dark souls",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"4",pic:"saleGameItem04",price:"$10.50",off:"-20%",video:"_005.webm",title:"Clash royale",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"5",pic:"saleGameItem05",price:"$12.40",off:"-20%",video:"_006.webm",title:"Chess",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"6",pic:"saleGameItem06",price:"$11.40",off:"-20%",video:"_007.webm",title:"Life is Strange",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"7",pic:"saleGameItem07",price:"$89.10",off:"-20%",video:"_008.webm",title:"FC 26",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"8",pic:"saleGameItem08",price:"$50.20",off:"-20%",video:"_009.webm",title:"CyberPunk2077",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"9",pic:"saleGameItem09",price:"$99.20",off:"-20%",video:"_010.webm",title:"Detroit",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"10",pic:"saleGameItem10",price:"$33.30",off:"-20%",video:"_011.webm",title:"Hades 2",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"11",pic:"saleGameItem11",price:"$90.33",off:"-20%",video:"_012.webm",title:"Dota 2",points:"100,000",tags:["multiplayer","shooter","openworld"]},
-    {id:"12",pic:"saleGameItem12",price:"$25.00",off:"-20%",video:"_013.webm",title:"Signalis",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"1",pic:"saleGameItem01",price:"30.00",off:"20",video:"_026.webm",title:"LeagueOfLegends",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"2",pic:"saleGameItem02",price:"50.00",off:"20",video:"_027.webm",title:"Sekiro",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"3",pic:"saleGameItem03",price:"22.00",off:"20",video:"_028.webm",title:"Dark souls",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"4",pic:"saleGameItem04",price:"10.50",off:"20",video:"_029.webm",title:"Clash royale",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"5",pic:"saleGameItem05",price:"12.40",off:"20",video:"_030.webm",title:"Chess",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"6",pic:"saleGameItem06",price:"11.40",off:"20",video:"_031.webm",title:"Life is Strange",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"7",pic:"saleGameItem07",price:"89.10",off:"20",video:"_032.webm",title:"FC 26",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"8",pic:"saleGameItem08",price:"50.20",off:"20",video:"_033.webm",title:"CyberPunk2077",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"9",pic:"saleGameItem09",price:"99.20",off:"20",video:"_034.webm",title:"Detroit",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"10",pic:"saleGameItem10",price:"33.30",off:"20",video:"_035.webm",title:"Hades 2",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"11",pic:"saleGameItem11",price:"90.33",off:"20",video:"_036.webm",title:"Dota 2",points:"100,000",tags:["multiplayer","shooter","openworld"]},
+    {id:"12",pic:"saleGameItem12",price:"25.00",off:"20",video:"_037.webm",title:"Signalis",points:"100,000",tags:["multiplayer","shooter","openworld"]},
 ]
-    for(i=0; i < salagameGames; i++){
+
+    
+const saleGameSliderContainer = document.getElementById("saleGameSlider")
+const itemsPerPage =3;
+const pageCount = Math.ceil(salagameGames.length/itemsPerPage);
+
+
+
+for(page = 0 ;page <pageCount ;page ++){
+
+        let saleGamePages = document.createElement("div");
+        saleGamePages.className = "saleGameSliderPage";
+        saleGameSliderContainer.appendChild(saleGamePages)
+
+        let start = page * itemsPerPage;
+        let end = start + itemsPerPage;
+        let pageItems = salagameGames.slice(start, end);
+    
+
+        for (i = 0 ;i < pageItems.length  ; i++){
+            
+            const gameItemContainer = document.createElement("div")
+            gameItemContainer.className = "game-item"
+
+            const gameItemHover = document.createElement("div")
+            gameItemHover.className = "game-item-hover"
+
+            const gameVideos = document.createElement("video")
+            gameVideos.autoplay = true;
+            gameVideos.loop = true;
+            gameVideos.muted = true;
+
+            const gameVideosSource = document.createElement("source")
+            gameVideosSource.src = "videos/gameCards/microtrailer" +  pageItems[i].video
+            gameVideosSource.type = "video/webm";
+            gameVideos.appendChild(gameVideosSource)
+
+
+
+            const gameTitle = document.createElement("div")
+            gameTitle.className = "gameItem-Title"
+            gameTitle.innerHTML = pageItems[i].title;
+
+            const gameView = document.createElement("div")
+            gameView.className = "game-View";
+            gameView.innerHTML = "OverWhelmigly Positive";
+
+            const gameViewSpan = document.createElement("span")
+            gameViewSpan.innerHTML = "(" + pageItems[i].points + ")";
+            gameView.appendChild(gameViewSpan)
+
+            const gameTags = document.createElement("div")
+            gameTags.className = "gameItem-Tags";
+            
+            pageItems[i].tags.forEach(tag => {
+            const gameTagsSpan = document.createElement("span")
+            gameTagsSpan.innerHTML = tag;
+            gameTags.appendChild(gameTagsSpan);
+                    })
+
+            const gameItemButton = document.createElement("button")
+            gameItemButton.innerHTML = "Add to Chart"
+
+            let images = document.createElement("img")
+            images.src = "game-image/saleGameSlider/" + pageItems[i].pic + ".jpg";
+           
+            const priceContainer = document.createElement("div")
+            priceContainer.className = "price-container";
+
+            const offPrice = document.createElement("span")
+            offPrice.className = "off-price"
+            offPrice.innerHTML = "-" + pageItems[i].off + "%";
+
+            const price = document.createElement("div")
+            price.innerHTML = pageItems[i].price + "$ USD";
+            price.className = "price";
         
+
+            const priceSpan = document.createElement("span")
+            priceSpan.innerHTML = pageItems[i].price * (100 - pageItems[i].off) + "$";
+
+        gameItemHover.appendChild(gameVideos)
+        gameItemHover.appendChild(gameTitle)
+        gameItemHover.appendChild(gameView)
+        gameItemHover.appendChild(gameTags)
+        gameItemHover.appendChild(gameItemButton)
+        gameItemContainer.appendChild(gameItemHover)
+        gameItemContainer.appendChild(images)
+        price.appendChild(priceSpan)
+        priceContainer.appendChild(offPrice)
+        priceContainer.appendChild(price)
+        gameItemContainer.appendChild(priceContainer)
+        saleGamePages.appendChild(gameItemContainer)
+        }
+        saleGameSliderContainer.appendChild(saleGamePages)
     }
 //homePageCards Grid Style
 var homePageCards = [

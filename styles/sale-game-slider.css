@@ -59,14 +59,14 @@
 .game-item-hover > .game-View{
     color:#6fbeff;
     margin-left: 25px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .game-item-hover > .game-View > span{
     color: white;
 }
 .gameItem-Tags{
 margin-left: 25px;
-margin-top: 5px;
+margin-top: 20px;
 display: flex;
 gap: 20px;
 }
@@ -115,9 +115,11 @@ border-radius: 3px;
     color: white;
     backdrop-filter: blur(px);
     background: rgba( 0, 0, 0, 0.4 );
+    padding-left: 10px;
 }
 .price > span{
-    color: #7c7d83
+    color: #7c7d83;
+    text-decoration: line-through;
 }
 #salegameleft{
     left: 10px;
