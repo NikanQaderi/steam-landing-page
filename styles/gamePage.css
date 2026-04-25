@@ -1,0 +1,108 @@
+#gamePage {
+  display: none;
+  background: radial-gradient(#6c7987 30%, #232f3d, #1b2838);
+}
+/* header */
+#gamepageHeader {
+  width: 1300px;
+  margin: 0 auto;
+  color: aliceblue;
+  position: relative;
+}
+#gameHeadernavigation {
+  font-size: 13px;
+  color: darkgrey;
+  margin-left: 30px;
+  padding: 10px;
+}
+#gameHeaderTitle {
+  font-size: 25px;
+  margin-left: 30px;
+  padding: 10px;
+  width: fit-content;
+}
+#gamepageHeader > button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 7px;
+}
+
+/* content */
+#gameDetailContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 520px;
+}
+#gameGallerySliderContainer {
+  width: 808px;
+  height: 455px;
+}
+#gameGallerySliderContainer > video {
+  width: 808px;
+  height: 455px;
+}
+
+#gameDescription {
+  width: 350px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+#gameDescription > img {
+  width: 375px;
+  height: 175px;
+  border-radius: 7px;
+}
+.gameDescriptionSnippet {
+  width: 375px;
+  height: fit-content;
+  color: white;
+  font-size: 16px;
+  line-height: 22px;
+  color: #c6d4df;
+}
+#descriptionGameName {
+  width: 375px;
+  height: 30px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 800;
+}
+#descriptionCompaniName {
+  width: 375px;
+  height: 30px;
+  font-size: 18px;
+  font-family: serif;
+  color: rgb(215, 220, 225);
+}
+#descriptionCompaniName > span {
+  color: rgb(138, 156, 229);
+  font-size: 22px;
+  font-weight: 700;
+}
+#peopleVote {
+  color: #bfd1e0;
+}
+#gameItemButton {
+  width: 170px;
+  height: 35px;
+  background-color: #a1cd44;
+  color: white;
+  margin: 0 auto;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#gameItemButtonClicked {
+  width: 170px;
+  height: 35px;
+  background-color: #3b520a;
+  color: white;
+  margin: 0 auto;
+  margin-top: 30px;
+  cursor: pointer;
+}

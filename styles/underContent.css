@@ -61,7 +61,6 @@
     align-content: center;
     display: flex;
     background: rgba(22, 41, 79, 0.7);
-    /* --light-ctn-bg-hover: rgba(88, 122, 192, 0.3); */
     border: 5px solid #061621;
 }
 .homeTabs-GameItem > img{
@@ -134,12 +133,11 @@
 #homeTabs-Preview > video {
     width: 346px;
     height: 191px;
-    /* border: 1px solid purple; */
 }
 #homeTabs-Preview > img {
     width: 346px;
     height: 191px;
-    /* border: 1px solid purple; */
+
 }
 /* buttom */
 #homeTabs-Button{

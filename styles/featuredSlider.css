@@ -72,19 +72,19 @@
 }
 
 #featuregameleft{
-    left: 580px;
-    bottom: 20px;
+    left: 0px;
+    bottom: 200px;
 }
 #featuregameright{
-    right: 580px;
-    bottom: 20px;
+    right: 0px;
+    bottom: 200px;
 }
 
 .featurePriceCon{
     width: 180px;
     position: absolute;
     height: 25px;
-    right: -18px;
+    right: -8px;
     bottom: -29px;
     display: flex;
 }

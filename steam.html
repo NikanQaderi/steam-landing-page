@@ -13,13 +13,19 @@
     <link rel="stylesheet" href="styles/CategorySlider.css">
     <link rel="stylesheet" href="styles/underContent.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/gamePage.css">
+    <link rel="stylesheet" href="styles/profilePage/ProfilePagecontainer.css">
 
 </head>
 
 <body>
-    <div>
+
+    <div id="landingPage">
         <div id="header">
             <div id="headertop">
+                <div id="profileIcon">
+                    <img src="icons/icon (2).svg" alt="">
+                </div>
                 <div id="steamicon">
                     <img src="icons/steam-svgrepo-com.svg" alt="">
                     <p>STEAM</p>
@@ -77,11 +83,8 @@
                     <source src="videos/webm_page_bg_english.webm" type="video/webm">
                 </video>
             </div>
-
             <div id="salegame-container">
-
                 <div id="saleGameSlider"></div>
-
                 <div id="slideThunmbs">
                     <span class="Thumbs thumbsSlider" onclick="addClass(this)"></span>
                     <span class="Thumbs" onclick="addClass(this)"></span>
@@ -89,34 +92,26 @@
                 </div>
                 <div class="button" id="salegameleft"> <img src="icons/left-svgrepo-com.svg" alt=""></div>
                 <div class="button" id="salegameright"> <img src="icons/right-svgrepo-com (1).svg" alt=""></div>
-
             </div>
-
             <div id="gameAwardsVote"></div>
-
-
             <div id="featuredSlidercon">
                 <div id="featurehead">
                     <div id="featureTitle">Featured Deep Discounts</div>
                     <div id="featureSubTitle"> Especially Great Deals on Some of the All-Time Greats</div>
                     <div id="featureButton"> See All </div>
                 </div>
-
                 <div id="featuredSlider"> </div>
                 <div class="button" id="featuregameleft"> <img src="icons/left-svgrepo-com.svg" alt=""></div>
                 <div class="button" id="featuregameright"> <img src="icons/right-svgrepo-com (1).svg" alt=""></div>
             </div>
-
             <div id="homePageGameCards">
             </div>
-
             <div id="categoryContainer">
                 <div id="categoryheader">Browse by category</div>
                 <div id="categorySliderContainer">
                     <div class="categorySlider"></div>
                 </div>
             </div>
-
             <div id="underContent">
                 <div id="homeTabs-Menu">
                     <div id="homeTabs">
@@ -130,17 +125,7 @@
                     </span>
                 </div>
                 <div id="homeTabs-Columns">
-
-                    <div id="homeTabsGameList">
-                        <!-- <div class="homeTabs-GameItem">
-                            <img src="game-image/undercontent/undercontent01.jpg" alt="">
-                            <div class="homeTabs-GameItem-Container">
-                                <div class="TabsGame-Title"> Dead-Island 2</div>
-                                <div class="TabsGame-tags">FPS, Shooter, Multiplayer, Competitive</div>
-                                <div class="TabsGame-details"></div>
-                            </div>
-                        </div> -->
-                    </div>
+                    <div id="homeTabsGameList"> </div>
                     <div id="homeTabs-Preview">
                         <div id="previewContainer">
                             <div id="preview-Title">Battlefield 2</div>
@@ -158,7 +143,41 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div id="profilePage">
+            <div id="profilePageContainer">
+                <div>
+                    <div id="profileContainer">
+                        <span class="ProfileHr"></span>
+                        <img src="img/profiles/profile1.jfif" alt="jfif">
+                        <span class="ProfileHr"></span>
+                    </div>
+                    <div id="profileInformation">
+                        <div id="informationLeft">
+
+                        </div>
+                        <div id="informationRight">
+                            <span id="ProfileName">N2laboratory</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gamePage">
+            <div id="gamepageHeader">
+                <div id="gameHeadernavigation">All Games > free to playes game > dota2</div>
+                <div id="gameHeaderTitle">Dota2</div>
+                <button>Community Hub</button>
+            </div>
+
+            <div id="gamePageContent">
+                <div id="gameDetailContainer">
+
+                </div>
+            </div>
         </div>
 
         <div id="footer">
@@ -191,10 +210,11 @@
             </div>
         </div>
     </div>
-
 </body>
 <script src="script/steam.js"></script>
 <script src="script/database.js"></script>
 <script src="script/searchDatabase.js"></script>
+<script src="script/pageHandling.js"></script>
+<script src="script/profile.js"></script>
 
 </html>

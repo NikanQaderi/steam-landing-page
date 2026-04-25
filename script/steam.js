@@ -73,29 +73,29 @@ function addClass(Element){
 
 
 
-const container = document.querySelector("#categorySliderContainer");
+const categoryContainer = document.getElementById("categorySliderContainer");
 let isDragging = false;
-let startX;
+let moveInX;
 let scrollLeft;
-container.addEventListener('mousedown', (e) => {
+categoryContainer.addEventListener("mousedown", (element) => {
     isDragging = true;
-    container.classList.add('dragging');
-    startX = e.pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
-    e.preventDefault();
+    categoryContainer.classList.add("dragging");
+    moveInX = element.pageX - categoryContainer.offsetLeft;
+    scrollLeft = categoryContainer.scrollLeft;
+    element.preventDefault();
 });
-container.addEventListener('mousemove', (e) => {
+categoryContainer.addEventListener("mousemove", (element) => {
     if (!isDragging) return; 
-    const x = e.pageX - container.offsetLeft;
-    const walk = (x - startX) * 2;
-    container.scrollLeft = scrollLeft - walk;
-    e.preventDefault();
+    const x = element.pageX - categoryContainer.offsetLeft;
+    const walk = (x - moveInX) * 2;
+    categoryContainer.scrollLeft = scrollLeft - walk;
+    element.preventDefault();
 });
-container.addEventListener('mouseup', () => {
+categoryContainer.addEventListener("mouseup", () => {
     isDragging = false;
-    container.classList.remove('dragging');
+    categoryContainer.classList.remove("dragging");
 });
-container.addEventListener('mouseleave', () => {
+categoryContainer.addEventListener('mouseleave', () => {
     isDragging = false;
-    container.classList.remove('dragging');
+
 });

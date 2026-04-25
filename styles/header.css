@@ -3,6 +3,22 @@
     display: flex;
     height: 104px;
 }
+#profileIcon{
+    position: absolute;
+    color: white;
+    top: 48px;
+    left: 20px;    
+}
+#profileIcon:hover > img{
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+}
+#profileIcon > img{
+    filter: drop-shadow(0 0 0 red);
+    width: 40px;
+    height: 40px;
+}
 #headertop > #steamicon{
     width: 176px;
     font-size: 27px;
@@ -15,6 +31,9 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+#steamicon:hover{
+    cursor: pointer;
 }
 #steamicon > img{
     width: 45px;
@@ -152,6 +171,7 @@ margin-top: 2px;
     font-family: "Motiva Sans",Arial,sans-serif;    
     border-radius: 2px 0px 0px 2px;
     border: 1px solid #ffffff24;
+    text-indent: 5px;
 }
 
 #search-container > #search-box > input::placeholder{
