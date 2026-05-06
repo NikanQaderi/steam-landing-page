@@ -354,7 +354,7 @@ search.onkeyup = function () {
       el.gameName.toLowerCase().indexOf(this.value.toLowerCase()) != -1 &&
       this.value != "",
   );
-  // getGameCardData(searched , "searchResult")
+
   fillSearch(searched);
 };
 function fillSearch(jsonData) {
@@ -534,7 +534,6 @@ function AddtoProfile() {
   localStorage.setItem("informationLeft", JSON.stringify(ProfileDataBase));
 }
 
-//JSON.parse(localStorage.getItem("informationLeft"))
 document.addEventListener("DOMContentLoaded", function () {
   AddtoProfile();
 });
